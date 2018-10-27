@@ -27,6 +27,21 @@ html
 	height:10%;
 }
 
+.links
+{
+	position: fixed;
+	width: 10%;
+	height: 8%;
+}
+
+.links img
+{
+	max-height:4vh;
+    max-width:4vh;
+    height:auto;
+    width:auto;
+}
+
 .footer
 {
 	position: fixed;
