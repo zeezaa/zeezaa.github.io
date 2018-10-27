@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Rock, Paper, Scissors!</title>
+</head>
+<body>
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+<font size="5">
+<select id="playerOp">
+  <option value="rock">Rock</option>
+  <option value="paper">Paper</option>
+  <option value="scissors">Scissors</option><br>
+</select>
+<button type="button" onclick="asd();">Rock, Paper, Scissors!</button>
+<div id="botDiv">bot: *choosing*</div><br>
+<div id="youDiv">you: *choosing*</div><br>
+<div id="resultDiv">result: *waiting*</div><br>
+<script>
+function asd(){
+var math = Math.floor(Math.random() * 3) + 1
+var bot = "Unexpected Error"
+var you = "Unexpected Error"
+var result = "Unexpected Error"
+var x = document.getElementById("playerOp").selectedIndex;
+var you = document.getElementsByTagName("option")[x].value
+if(math == 1){bot = "rock"}
+if(math == 2){bot = "paper"}
+if(math == 3){bot = "scissors"}
+//tie
+if(bot == you){result = "tie"}
+//rock paper
+if(bot == "rock" && you == "paper"){result = "you win"}
+if(bot == "paper" && you == "rock"){result = "you lose"}
+// paper scissors
+if(bot == "paper" && you == "scissors"){result = "you win"}
+if(bot == "scissors" && you == "paper"){result = "you lose"}
+// scissors rock
+if(bot == "scissors" && you == "rock"){result = "you win"}
+if(bot == "rock" && you == "scissors"){result = "you lose"}
+
+document.getElementById("botDiv").innerHTML="bot: " + bot;
+document.getElementById("youDiv").innerHTML="you: " + you;
+document.getElementById("resultDiv").innerHTML="result: " + result;}
+</script>
+  <hr>
+</body>
+</html>

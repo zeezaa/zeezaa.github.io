@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-1"> 
+<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+<link href="style.css" rel="stylesheet" type="text/css"></style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<link href=' http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+<title>zeezaa</title>
+</head>
+<body onload="hash(true)" onhashchange="hash(false);">
+<table class="header">
+<tr>
+	<th><button class="button" id="home" onclick="window.location.href='#home';">home</button></th>
+	<th><button class="button" id="projects" onclick="window.location.href='#projects';">projects</button></th>
+	<th><button class="button" id="web" onclick="window.location.href='#web';">web</button></th>
+	<th><button class="button" id="youtube" onclick="window.location.href='#youtube';">youtube</button></th>
+</tr>
+</div>
+<input type="image" id="left" class="arrow" onclick="move(false)" src="aLeft.svg" />
+<input type="image" id="right" class="arrow" onclick="move(true)" src="aRight.svg" />
+<object class="page" id="-1" type="text/html" data="extra.html" ></object>
+<object class="page" id="0" type="text/html" data="home.html" ></object>
+<object class="page" id="1" type="text/html" data="projects.html" ></object>
+<object class="page" id="2" type="text/html" data="web.html" ></object>
+<object class="page" id="3" type="text/html" data="youtube.html" ></object>
+<object class="page" id="4" type="text/html" data="404.html" ></object>
+<div class="footer">footer</div>
+</body>
+</html>

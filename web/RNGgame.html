@@ -1,0 +1,52 @@
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+<div id="number" style="text-align:center; font-size:200px;">press play</div>
+<div id="rolls" style="text-align:center; font-size:100px;">rolls: 10</div>
+<div id="points" style="text-align:center; font-size:100px;">points: 0</div>
+<button id="button" onclick="play();" style="font-size:100px; position:absolute; left:42.5%;">play</button>
+<div id="highscore" style="font-size:50px; position:absolute; top:80%; left:42%;">highscore: 0</div>
+<div id="lowscore" style="font-size:50px; position:absolute; top:90%; left:42%;">lowscore: 0</div>
+<script>
+var highscore=0;
+var lowscore=100;
+var rolls=10;
+var points=0;
+
+if (localStorage.getItem("highscore") != null) {highscore = +localStorage.getItem("highscore");}
+if (localStorage.getItem("lowscore") != null) {lowscore = +localStorage.getItem("lowscore");}
+document.getElementById("highscore").innerHTML="highscore:" + highscore;
+document.getElementById("lowscore").innerHTML="lowscore:" + lowscore;
+
+function play(){
+if(rolls>0){
+rolls--;
+document.getElementById("rolls").innerHTML="rolls: " + rolls;
+var RNG = Math.floor(Math.random() * 10) + 0;
+document.getElementById("number").innerHTML=RNG;
+
+document.getElementById("button").innerHTML="roll";
+
+points = points + RNG;
+document.getElementById("points").innerHTML="points: " + points;
+document.getElementById("highscore").innerHTML="highscore:" + highscore;
+document.getElementById("lowscore").innerHTML="lowscore:" + lowscore;
+setTimeout(function(){if(rolls == 0){play();}}, 1000);
+}
+
+else{
+if(points<lowscore){
+lowscore=points;
+localStorage.setItem("lowscore",lowscore);
+}
+
+if(points>highscore){
+highscore=points;
+localStorage.setItem("highscore",highscore);
+}
+var r = confirm("start over?");
+if (r === true) {window.location.reload();}
+}
+}
+
+</script>

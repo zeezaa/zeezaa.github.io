@@ -1,0 +1,325 @@
+</html>
+<head>
+<title>Click Factory</title>
+</head>
+<body onload="loadSave();">
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"> 
+<style type="text/css">
+  
+.menubuttonsOff {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:25px;
+	-moz-border-radius-topleft:25px;
+	border-top-left-radius:25px;
+	-webkit-border-top-right-radius:25px;
+	-moz-border-radius-topright:25px;
+	border-top-right-radius:25px;
+	-webkit-border-bottom-right-radius:25px;
+	-moz-border-radius-bottomright:25px;
+	border-bottom-right-radius:25px;
+	-webkit-border-bottom-left-radius:25px;
+	-moz-border-radius-bottomleft:25px;
+	border-bottom-left-radius:25px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	height:40px;
+	width:85px;
+    outline:none;}
+
+.menubuttonsOn {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3C5E80), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:25px;
+	-moz-border-radius-topleft:25px;
+	border-top-left-radius:25px;
+	-webkit-border-top-right-radius:25px;
+	-moz-border-radius-topright:25px;
+	border-top-right-radius:25px;
+	-webkit-border-bottom-right-radius:25px;
+	-moz-border-radius-bottomright:25px;
+	border-bottom-right-radius:25px;
+	-webkit-border-bottom-left-radius:25px;
+	-moz-border-radius-bottomleft:25px;
+	border-bottom-left-radius:25px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	height:40px;
+	width:85px;
+    outline:none;}	
+  
+.itemsOff {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background-color:#ededed;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#323232;
+	font-family:Comic Sans MS;
+	font-size:12px;
+	line-height:20px;
+    outline:none;}
+
+.itemsOn {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #CCCCCC), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background-color:#ededed;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#323232;
+	font-family:Comic Sans MS;
+	font-size:12px;
+	line-height:20px;
+    outline:none;}
+</style>
+<br>
+<font size="8" color="black">
+Click Factory
+  <br>
+<font size="3">
+<br>
+<button class="menubuttonsOff" onmouseover="this.className='menubuttonsOn'" onmouseout="this.className='menubuttonsOff'" onclick="ownSave();"><div id="seiv"> Save </div></button>
+<button class="menubuttonsOff" onmouseover="this.className='menubuttonsOn'" onmouseout="this.className='menubuttonsOff'" onclick="risetSave();"><div id="riset"> Reset </div></button>
+<button class="menubuttonsOff" onmouseover="this.className='menubuttonsOn'" onmouseout="this.className='menubuttonsOff'" onclick="autoSave();" style="width:200px"><div id="autoSeiv"> Enable autosave </div></button>
+<br>
+<p id="textArea"> </p>
+<br>
+<table cellpadding="1" style="border-collapse: collapse">
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addClick()" title="get clicks to buy things"><img src="http://i.imgur.com/rtrYqW8.png"><br>get click<div id="perSec">per sec: 0</div><div id="myClicks">0 clicks</div></button></td>
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addUser()" title="user clicks every second"><img src="http://i.imgur.com/GL2uxLI.png"><br>get user<div id="userCost">cost: 10</div><div id="myUsers">own: 0</div></button></td>
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addCookieclicker()" title="Playes cookie clicker 10per second "><img src="http://i.imgur.com/G4hBbOS.png"><br>get cookie clicker<div id="cookieclickerCost">cost: 100</div><div id="myCookieclickers">own: 0</div></button></td>
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addClickLevel()" title="2x more from your clicks"><img src="https://i.imgur.com/APJPHKZ.png"><br>get click level<div id="clickLevelCost">cost: 400</div><div id="myClickLevel">level: 1</div></button></td>
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addFactory()" title="Gets more users every 5 minutes"><img src="http://i.imgur.com/TgSklfP.png"><br>buy factory<div id="factoryCost">cost: 100000</div><div id="myFactories">own: 0</div></button></td><tr>
+  <td><button class="itemsOff" onmouseover="this.className='itemsOn'" onmouseout="this.className='itemsOff'" onclick="addAutoclicker()" title="Clicks 100 every second"><img src="http://i.imgur.com/p1hvELO.png"><br>get autoclicker<div id="autoclickerCost">cost: 50000</div><div id="myAutoclickers">own: 0</div></button></td>
+  
+  <td><button style="visibility:hidden" id="mouseUp" class="itemsOff" onclick="mausUp();" title="Users like new mouses and click more"><img width="128" height="128" src="http://i.imgur.com/oJl67eN.png"><br>Get better mouses<div id="upgreid">cost: 10000</div><div id="myMuuses">level 1</div></button></td>
+</table>
+<script>
+  
+  function mausUp(){
+    if(clicks >= 10000){
+  clicks = clicks - 10000;
+  mouseUp = mouseUp * 2;
+  document.getElementById("mouseUp").style.visibility="hidden";}
+  else{
+  alert("you need 10000 clicks");}}
+
+var mouseUp;
+var autoseiv = 0;
+var autoInt = 1;
+var clicks = 0;
+var users = 0;
+var userCost = 10;
+var clickLevel = 1;
+var clickLevelCost = 200;
+var factories = 0;
+var factoryCost = 100000;
+var cookieclickers = 0;
+var cookieclickerCost = 100;
+var autoclickers = 0;
+var autoclickerCost = 1000000;
+  
+function autoSave(){
+  if(autoseiv === 0){
+    autoseiv = 1;
+autoInt = setInterval(function(){ownSave();},60000);
+document.getElementById("autoSeiv").innerHTML = "Disable autosave";}
+  else{clearInterval(autoInt);
+       autoseiv = 0;
+      document.getElementById("autoSeiv").innerHTML = "Enable autosave";}}
+
+function setNormalValues(){
+mouseUp = 1;  
+autoseiv = 0;
+autoInt = 1;
+clicks = 0;
+users = 0;
+userCost = 20;
+clickLevel = 1;
+clickLevelCost = 200;
+factories = 0;
+factoryCost = 100000;
+cookieclickers = 0;
+cookieclickerCost = 100;
+autoclickers = 0;
+autoclickerCost = 1000000;}
+
+function risetSave(){
+var r = confirm("!!WARNING!! this will reset all progress, want to continue?");
+if (r === true) {
+setNormalValues();
+document.getElementById("mouseUp").style.visibility="hidden";
+setTimeout(function(){ownSave();}, 10);
+document.getElementById("riset").innerHTML = "Reseted";
+setTimeout(function(){document.getElementById("riset").innerHTML = "Reset";},1000);}}
+
+function loadSave(){if (localStorage.getItem("clicks") === null) {
+setNormalValues();}
+else{
+clicks = +localStorage.getItem("clicks");
+users = +localStorage.getItem("users");
+userCost = +localStorage.getItem("userCost");
+clickLevel = +localStorage.getItem("clickLevel");
+clickLevelCost = +localStorage.getItem("clickLevelCost");
+factories = +localStorage.getItem("factories");
+factoryCost = +localStorage.getItem("factoryCost");
+cookieclickers =  +localStorage.getItem("cookieclickers");
+cookieclickerCost = +localStorage.getItem("cookieclickerCost");
+autoclickers = +localStorage.getItem("autoclickers");
+autoclickerCost = +localStorage.getItem("autoclickerCost");
+autoseiv = +localStorage.getItem("autoseiv");
+mouseUp = +localStorage.getItem("mouseUp");
+  
+if(factories >= 1 && mouseUp == 1){document.getElementById("mouseUp").style.visibility="visible";}
+  
+if(autoseiv == 1){
+  autoInt = setInterval(function(){ownSave();},60000);
+  document.getElementById("autoSeiv").innerHTML = "Disable autosave";}}}
+
+
+function ownSave(){
+localStorage.setItem("clicks",clicks);
+localStorage.setItem("users",users);
+localStorage.setItem("userCost",userCost);
+localStorage.setItem("clickLevel",clickLevel);
+localStorage.setItem("clickLevelCost",clickLevelCost);
+localStorage.setItem("factories",factories);
+localStorage.setItem("factoryCost",factoryCost);
+localStorage.setItem("cookieclickers",cookieclickers);
+localStorage.setItem("cookieclickerCost",cookieclickerCost);
+localStorage.setItem("autoclickers",autoclickers);
+localStorage.setItem("autoclickerCost",autoclickerCost);
+localStorage.setItem("autoseiv",autoseiv);
+localStorage.setItem("mouseUp",mouseUp);
+document.getElementById("seiv").innerHTML = "Saved";
+setTimeout(function(){document.getElementById("seiv").innerHTML = "Save";},1000);}
+  
+  
+setInterval(function(){users = users + factories;},60000 * 5);  
+setInterval(function(){clicks = clicks + users * mouseUp;},1000);
+setInterval(function(){document.getElementById('myClickLevel').innerHTML = "level: " + clickLevel;},10);
+setInterval(function(){document.getElementById('clickLevelCost').innerHTML = "cost: " + clickLevelCost;},10);
+setInterval(function(){document.getElementById('userCost').innerHTML = "cost: " + userCost;},10);
+setInterval(function(){document.getElementById('myUsers').innerHTML = "own: " + users;},10);
+setInterval(function(){document.getElementById('factoryCost').innerHTML = "cost: " + factoryCost;},10);
+setInterval(function(){document.getElementById('myFactories').innerHTML = "own: " + factories;},10);
+setInterval(function(){document.getElementById('myClicks').innerHTML = clicks + " clicks";},10);
+setInterval(function(){document.getElementById('myUsers').innerHTML = "own: " + users;},10);
+setInterval(function(){document.getElementById('myAutoclickers').innerHTML = "own: " + autoclickers;},10);
+setInterval(function(){document.getElementById('autoclickerCost').innerHTML = "cost: " + autoclickerCost;},10);
+setInterval(function(){clicks = clicks + cookieclickers * 10 + autoclickers * 100;},1000);
+setInterval(function(){document.getElementById('perSec').innerHTML = "per sec: "  + (cookieclickers * 10 + users * mouseUp + autoclickers * 100);},10);
+setInterval(function(){document.getElementById('myCookieclickers').innerHTML = "own: " + cookieclickers;},10);
+setInterval(function(){document.getElementById('cookieclickerCost').innerHTML = "cost: " + cookieclickerCost;},10);
+
+function addClick(){
+ clicks = clicks + clickLevel;}
+function addUser(){
+if(clicks >= userCost){
+ clicks = clicks - userCost;
+  userCost = userCost * 2;
+ users = users + 1;}
+ else{
+ alert("you need " + userCost + " clicks");}}
+function addCookieclicker(){
+if(clicks >= cookieclickerCost && users >= 1){
+ users = users - 1;
+ clicks = clicks - cookieclickerCost;
+ cookieclickerCost = cookieclickerCost * 5;
+ cookieclickers = cookieclickers + 1;}
+ else{
+ alert("you need " + cookieclickerCost + " clicks and at least 1 user");}}
+ function addClickLevel(){
+if(clicks >= clickLevelCost){
+ clicks = clicks - clickLevelCost;
+ clickLevelCost = clickLevelCost * 3;
+ clickLevel = clickLevel * 2;}
+ else{
+ alert("you need " + clickLevelCost + " clicks");}}
+ function addFactory(){
+if(clicks >= factoryCost && users >= 8){
+ clicks = clicks - factoryCost;
+ factoryCost = factoryCost * 5;
+ factories = factories + 1;
+ users = users - 8;
+  if(factories >= 1){if(mouseUp == 1){document.getElementById("mouseUp").style.visibility="visible";}}}                   
+ else{
+ alert("you need " + factoryCost + " clicks and at least 8 users");}}
+ function addAutoclicker(){
+if(clicks >= autoclickerCost && users >= 1){
+ clicks = clicks - autoclickerCost;
+ autoclickerCost = autoclickerCost * 5;
+ autoclickers = autoclickers + 1;
+ users = users - 1;}
+ else{
+ alert("you need " + autoclickerCost + " clicks and at least 1 user");}}
+ 
+ setInterval(function(){
+var textArea = [
+    "Youtube: zeezaa -ziizaa",
+    "Over 300 lines of code -ziizaa",
+    "Konami code is a cheat code -ziizaa",
+    "The more you click the more you find -ziizaa",
+	"I like to click -factory worker",
+	"More mouses!! -factory worker",
+	"When i get home im gonna click -factory worker",
+	"Orteil is a nice man -ziizaa",
+	"I just click all day -autoclicker",
+	"I like to get cookies -cookieclicker",
+	"... -teme"];
+var randomString = Math.floor(Math.random()*textArea.length);
+document.getElementById("textArea").innerHTML= textArea[randomString];}, 25000);
+ 
+ window.onbeforeunload=function() { if (userCost > 21 || clickLevelCost > 201 || factoryCost > 100001 || cookieclickerCost > 101 || autoclickerCost > 1000001){
+ return "did you remember to save Click Factory progress ?";}}
+</script>
+<font size="2">
+<br>
+<hr>
+ver.0.0.1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this page uses cookies to save Click Factory game process
+<hr>
+Special thanks to Orteil from making Cookie Clicker keep up the good work! :)
+<hr>
+recent update: mouseover update 
+<hr>
+coming: sumtin
+<hr>
+</body>
+</html>

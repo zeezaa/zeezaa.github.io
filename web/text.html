@@ -1,0 +1,316 @@
+<html>
+<head>
+<title>Text stuff</title>
+</head>
+<body>
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+text coder and decoder <br><br><font size="2">
+select key:
+ <input type="number" id="keySelect" min="1" max="3" value="1">
+(when decoding use the same key) 
+<table>
+<tr>
+<td><input id="makecode"></input></td>
+<td><input id="decode"></input></td>
+</tr><tr>
+<td><button id="makecode" onclick="startCoding();">make code</button></td>
+<td><button id="makedecode" onclick="decodeIt();">decode</button></td>
+</tr>
+</table>
+<div id="output"></div>
+<script>
+function startCoding(){
+window.key = document.getElementById("keySelect").value;
+document.getElementById("output").innerHTML = ""
+codingIt()}
+function codingIt(){
+var string = document.getElementById("makecode").value
+var stringL = document.getElementById("makecode").value.length;
+var letter = string.charAt(0)
+document.getElementById("makecode").value = string.replace(letter, "");
+
+  if(key == "1"){
+if (letter == "a"){var letterF = "k"}
+if (letter == "b"){var letterF = "w"}
+if (letter == "c"){var letterF = "v"}
+if (letter == "d"){var letterF = "p"}
+if (letter == "e"){var letterF = "j"}
+if (letter == "f"){var letterF = "g"}
+if (letter == "g"){var letterF = "r"}
+if (letter == "h"){var letterF = "f"}
+if (letter == "i"){var letterF = "s"}
+if (letter == "j"){var letterF = "n"}
+if (letter == "k"){var letterF = "z"}
+if (letter == "l"){var letterF = "c"}
+if (letter == "m"){var letterF = "e"}
+if (letter == "n"){var letterF = "o"}
+if (letter == "o"){var letterF = "d"}
+if (letter == "p"){var letterF = "q"}
+if (letter == "q"){var letterF = "i"}
+if (letter == "r"){var letterF = "x"}
+if (letter == "s"){var letterF = "l"}
+if (letter == "t"){var letterF = "y"}
+if (letter == "u"){var letterF = "m"}
+if (letter == "v"){var letterF = "u"}
+if (letter == "w"){var letterF = "h"}
+if (letter == "x"){var letterF = "t"}
+if (letter == "y"){var letterF = "b"}
+if (letter == "z"){var letterF = "a"}
+    
+if (letter == "0"){var letterF = "7"}    
+if (letter == "1"){var letterF = "5"}
+if (letter == "2"){var letterF = "9"}
+if (letter == "3"){var letterF = "4"}
+if (letter == "4"){var letterF = "8"}
+if (letter == "5"){var letterF = "1"}
+if (letter == "6"){var letterF = "3"}
+if (letter == "7"){var letterF = "0"}
+if (letter == "8"){var letterF = "2"}
+if (letter == "9"){var letterF = "6"}}
+  
+  if(key == "2"){
+if (letter == "a"){var letterF = "q"}
+if (letter == "b"){var letterF = "w"}
+if (letter == "c"){var letterF = "e"}
+if (letter == "d"){var letterF = "r"}
+if (letter == "e"){var letterF = "t"}
+if (letter == "f"){var letterF = "y"}
+if (letter == "g"){var letterF = "u"}
+if (letter == "h"){var letterF = "i"}
+if (letter == "i"){var letterF = "o"}
+if (letter == "j"){var letterF = "p"}
+if (letter == "k"){var letterF = "n"}
+if (letter == "l"){var letterF = "a"}
+if (letter == "m"){var letterF = "s"}
+if (letter == "n"){var letterF = "d"}
+if (letter == "o"){var letterF = "f"}
+if (letter == "p"){var letterF = "g"}
+if (letter == "q"){var letterF = "h"}
+if (letter == "r"){var letterF = "j"}
+if (letter == "s"){var letterF = "k"}
+if (letter == "t"){var letterF = "l"}
+if (letter == "u"){var letterF = "b"}
+if (letter == "v"){var letterF = "m"}
+if (letter == "w"){var letterF = "z"}
+if (letter == "x"){var letterF = "x"}
+if (letter == "y"){var letterF = "c"}
+if (letter == "z"){var letterF = "v"}
+
+if (letter == "0"){var letterF = "5"}    
+if (letter == "1"){var letterF = "7"}
+if (letter == "2"){var letterF = "6"}
+if (letter == "3"){var letterF = "8"}
+if (letter == "4"){var letterF = "0"}
+if (letter == "5"){var letterF = "3"}
+if (letter == "6"){var letterF = "9"}
+if (letter == "7"){var letterF = "1"}
+if (letter == "8"){var letterF = "4"}
+if (letter == "9"){var letterF = "2"}}
+	
+  if(key == "3"){
+if (letter == "a"){var letterF = "r"}
+if (letter == "b"){var letterF = "z"}
+if (letter == "c"){var letterF = "s"}
+if (letter == "d"){var letterF = "t"}
+if (letter == "e"){var letterF = "d"}
+if (letter == "f"){var letterF = "x"}
+if (letter == "g"){var letterF = "i"}
+if (letter == "h"){var letterF = "v"}
+if (letter == "i"){var letterF = "g"}
+if (letter == "j"){var letterF = "j"}
+if (letter == "k"){var letterF = "o"}
+if (letter == "l"){var letterF = "w"}
+if (letter == "m"){var letterF = "f"}
+if (letter == "n"){var letterF = "m"}
+if (letter == "o"){var letterF = "a"}
+if (letter == "p"){var letterF = "h"}
+if (letter == "q"){var letterF = "l"}
+if (letter == "r"){var letterF = "n"}
+if (letter == "s"){var letterF = "y"}
+if (letter == "t"){var letterF = "k"}
+if (letter == "u"){var letterF = "e"}
+if (letter == "v"){var letterF = "b"}
+if (letter == "w"){var letterF = "c"}
+if (letter == "x"){var letterF = "u"}
+if (letter == "y"){var letterF = "q"}
+if (letter == "z"){var letterF = "p"}
+
+if (letter == "0"){var letterF = "5"}    
+if (letter == "1"){var letterF = "7"}
+if (letter == "2"){var letterF = "6"}
+if (letter == "3"){var letterF = "8"}
+if (letter == "4"){var letterF = "0"}
+if (letter == "5"){var letterF = "3"}
+if (letter == "6"){var letterF = "9"}
+if (letter == "7"){var letterF = "1"}
+if (letter == "8"){var letterF = "4"}
+if (letter == "9"){var letterF = "2"}}
+  
+if (letter == " "){var letterF = " "}
+  
+setTimeout(continueCode(), 10)
+
+function continueCode(){
+document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + "" + letterF
+var stringL = document.getElementById("makecode").value.length;
+  if(stringL != 0){codingIt()}}}
+
+function decodeIt(){
+window.key = document.getElementById("keySelect").value;
+document.getElementById("output").innerHTML = ""
+decode()}
+function decode(){
+var string = document.getElementById("decode").value
+var stringL = document.getElementById("decode").value.length;
+var letter = string.charAt(0)
+document.getElementById("decode").value = string.replace(letter, "");
+  
+  if(key == "1"){
+if (letter == "k"){var letterF = "a"}
+if (letter == "w"){var letterF = "b"}
+if (letter == "v"){var letterF = "c"}
+if (letter == "p"){var letterF = "d"}
+if (letter == "j"){var letterF = "e"}
+if (letter == "g"){var letterF = "f"}
+if (letter == "r"){var letterF = "g"}
+if (letter == "f"){var letterF = "h"}
+if (letter == "s"){var letterF = "i"}
+if (letter == "n"){var letterF = "j"}
+if (letter == "z"){var letterF = "k"}
+if (letter == "c"){var letterF = "l"}
+if (letter == "e"){var letterF = "m"}
+if (letter == "o"){var letterF = "n"}
+if (letter == "d"){var letterF = "o"}
+if (letter == "q"){var letterF = "p"}
+if (letter == "i"){var letterF = "q"}
+if (letter == "x"){var letterF = "r"}
+if (letter == "l"){var letterF = "s"}
+if (letter == "y"){var letterF = "t"}
+if (letter == "m"){var letterF = "u"}
+if (letter == "u"){var letterF = "v"}
+if (letter == "h"){var letterF = "w"}
+if (letter == "t"){var letterF = "x"}
+if (letter == "b"){var letterF = "y"}
+if (letter == "a"){var letterF = "z"}
+  
+if (letter == "7"){var letterF = "0"}    
+if (letter == "5"){var letterF = "1"}
+if (letter == "9"){var letterF = "2"}
+if (letter == "4"){var letterF = "3"}
+if (letter == "8"){var letterF = "4"}
+if (letter == "1"){var letterF = "5"}
+if (letter == "3"){var letterF = "6"}
+if (letter == "0"){var letterF = "7"}
+if (letter == "2"){var letterF = "8"}
+if (letter == "6"){var letterF = "9"}}
+  
+  if(key == "2"){
+if (letter == "q"){var letterF = "a"}
+if (letter == "w"){var letterF = "b"}
+if (letter == "e"){var letterF = "c"}
+if (letter == "r"){var letterF = "d"}
+if (letter == "t"){var letterF = "e"}
+if (letter == "y"){var letterF = "f"}
+if (letter == "u"){var letterF = "g"}
+if (letter == "i"){var letterF = "h"}
+if (letter == "o"){var letterF = "i"}
+if (letter == "p"){var letterF = "j"}
+if (letter == "b"){var letterF = "k"}
+if (letter == "a"){var letterF = "l"}
+if (letter == "s"){var letterF = "m"}
+if (letter == "d"){var letterF = "n"}
+if (letter == "f"){var letterF = "o"}
+if (letter == "g"){var letterF = "p"}
+if (letter == "h"){var letterF = "q"}
+if (letter == "j"){var letterF = "r"}
+if (letter == "k"){var letterF = "s"}
+if (letter == "l"){var letterF = "t"}
+if (letter == "m"){var letterF = "u"}
+if (letter == "n"){var letterF = "v"}
+if (letter == "z"){var letterF = "w"}
+if (letter == "x"){var letterF = "x"}
+if (letter == "c"){var letterF = "y"}
+if (letter == "v"){var letterF = "z"}
+
+if (letter == "5"){var letterF = "0"}    
+if (letter == "7"){var letterF = "1"}
+if (letter == "6"){var letterF = "2"}
+if (letter == "8"){var letterF = "3"}
+if (letter == "0"){var letterF = "4"}
+if (letter == "3"){var letterF = "5"}
+if (letter == "9"){var letterF = "6"}
+if (letter == "1"){var letterF = "7"}
+if (letter == "4"){var letterF = "8"}
+if (letter == "2"){var letterF = "9"}}
+
+  if(key == "3"){
+if (letter == "r"){var letterF = "a"}
+if (letter == "z"){var letterF = "b"}
+if (letter == "s"){var letterF = "c"}
+if (letter == "t"){var letterF = "d"}
+if (letter == "d"){var letterF = "e"}
+if (letter == "x"){var letterF = "f"}
+if (letter == "i"){var letterF = "g"}
+if (letter == "v"){var letterF = "h"}
+if (letter == "g"){var letterF = "i"}
+if (letter == "j"){var letterF = "j"}
+if (letter == "o"){var letterF = "k"}
+if (letter == "w"){var letterF = "l"}
+if (letter == "f"){var letterF = "m"}
+if (letter == "m"){var letterF = "n"}
+if (letter == "a"){var letterF = "o"}
+if (letter == "h"){var letterF = "p"}
+if (letter == "l"){var letterF = "q"}
+if (letter == "n"){var letterF = "r"}
+if (letter == "y"){var letterF = "s"}
+if (letter == "k"){var letterF = "t"}
+if (letter == "e"){var letterF = "u"}
+if (letter == "b"){var letterF = "v"}
+if (letter == "c"){var letterF = "w"}
+if (letter == "u"){var letterF = "x"}
+if (letter == "q"){var letterF = "y"}
+if (letter == "p"){var letterF = "z"}
+
+if (letter == "0"){var letterF = "5"}    
+if (letter == "1"){var letterF = "7"}
+if (letter == "2"){var letterF = "6"}
+if (letter == "3"){var letterF = "8"}
+if (letter == "4"){var letterF = "0"}
+if (letter == "5"){var letterF = "3"}
+if (letter == "6"){var letterF = "9"}
+if (letter == "7"){var letterF = "1"}
+if (letter == "8"){var letterF = "4"}
+if (letter == "9"){var letterF = "2"}}
+  
+if (letter == " "){var letterF = " "}
+
+document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + "" + letterF
+var stringL = document.getElementById("decode").value.length;
+if(stringL != 0){decode()}}
+</script>
+<br>
+<hr>
+<br>
+text scrambler <br>
+<input type="text" id="string"></input>
+<button type="button" onClick="startIt();">Make into code</button>
+<div id="code"></div>
+<script>
+function startIt(){
+document.getElementById("code").innerHTML = ""
+codeIt()}
+function codeIt(){
+var string = document.getElementById("string").value
+var stringL = document.getElementById("string").value.length;
+var letterNo = Math.floor(Math.random() * stringL) + 0
+var letter = string.charAt(letterNo)
+document.getElementById("string").value = string.replace(letter, "");
+if (letter == " "){letter = "_"}
+document.getElementById("code").innerHTML = document.getElementById("code").innerHTML + "" + letter
+stringL = string.length;
+if(stringL != 0){codeIt()}}
+</script>
+</body>
+</html>

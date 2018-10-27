@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Dice</title>
+</head>
+<body>
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+<font size="8" color="black">
+Web dice<br>
+<font size="3">
+  <img id="IYKWIM" src="IYKWIM.png" width="100" height="100" hidden="true" preload="auto">
+    <img id="666" src="666.jpg" width="100" height="100" hidden="true" preload="auto">
+  <audio id="audio" src="dice.mp3" preload="auto"></audio>
+  <audio id="9000" src="9000.mp3" preload="auto"></audio>
+MAX: <input type="number" id="maxDice" min="1" max="10000" value=6>
+<input type="button" value="roll!" onclick="roll()"><br>
+<canvas Onclick="roll()" id="diceCanvas" width="400" height="400" style="border:10px solid black;">Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+var c=document.getElementById("diceCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="black";
+function roll(){ 
+window.max = document.getElementById("maxDice").value;
+document.getElementById('audio').play();
+ctx.clearRect(0, 0, 400, 400)
+setTimeout(function(){clear()},200);}
+function clear(){  
+ctx.clearRect(0, 0, 400, 400)  
+setTimeout(function(){timin()},100);}
+function timin(){
+var dice = Math.floor(Math.random() * max) + 1
+if(dice > 10000){dice = "too big"}
+if(dice == 1){
+ctx.fillRect(175,175,50,50);}
+if(dice == 2) {
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,300,50,50);}
+if(dice == 3){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(175,175,50,50);
+ctx.fillRect(300,300,50,50);}
+if(dice == 4){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(300,300,50,50);}
+if(dice == 5){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(300,300,50,50);
+ctx.fillRect(175,175,50,50);}
+if(dice == 6){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(300,300,50,50);
+ctx.fillRect(50,175,50,50);
+ctx.fillRect(300,175,50,50);}
+if(dice == 7){
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(50,175,50,50);
+ctx.fillRect(300,175,50,50);
+ctx.fillRect(175, 175, 50, 50); 
+ctx.fillRect(175, 50, 50, 50); 
+ctx.fillRect(175, 300, 50, 50); }
+if(dice == 8){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(300,300,50,50);
+ctx.fillRect(50,175,50,50);
+ctx.fillRect(300,175,50,50);
+ctx.fillRect(175, 50, 50, 50); 
+ctx.fillRect(175, 300, 50, 50); }
+if(dice == 9){
+ctx.fillRect(50,50,50,50);
+ctx.fillRect(300,50,50,50);
+ctx.fillRect(50,300,50,50);
+ctx.fillRect(300,300,50,50);
+ctx.fillRect(50,175,50,50);
+ctx.fillRect(300,175,50,50);
+ctx.fillRect(175, 175, 50, 50); 
+ctx.fillRect(175, 50, 50, 50); 
+ctx.fillRect(175, 300, 50, 50); }
+ctx.font = "bold 25px Arial";
+  ctx.fillText(dice, 0, 395)
+if(dice >= 10){
+  ctx.font = "bold 100px Arial";
+  ctx.fillText(dice, 25, 75);}
+if(dice == 69){var img=document.getElementById("IYKWIM");
+ctx.drawImage(img,100,100);}
+else if(dice > 9000){document.getElementById("9000").play();}
+else if(dice == 666){ 
+    ctx.font = "bold 100px Arial";
+    ctx.font.color = "red";
+  ctx.fillText(dice, 25, 75);
+    var img=document.getElementById("666");
+ctx.drawImage(img,100,100);
+}}
+</script>
+<br>
+v1.0
+  <br>
+</body>
+</html>

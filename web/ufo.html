@@ -1,0 +1,33 @@
+<html>
+<body>
+<a href="../web.html" style="position: fixed; top: 2%; left:2%;">
+<image src="../aLeft.svg"></image>
+</a>
+<style>
+body{
+ background-image:url(http://wallpoper.com/images/00/37/87/60/cityscapes-buildings_00378760.jpg);
+   background-repeat:no-repeat;
+   background-size:cover;}
+</style>
+<br><br>
+<marquee id="ufo1" behavior="scroll" direction="right" scrollamount="20">
+<img onclick="change1Dir()" src="http://www.gifs.net/Animation11/Transportation/UFOs/3D_UFO_spins.gif" width="96" height="60"/>
+</marquee>
+<br><br>
+<marquee id="ufo2" behavior="scroll" direction="left" scrollamount="25">
+<img onclick="change2Dir()" src="http://www.gifs.net/Animation11/Transportation/UFOs/3D_UFO_spins.gif" width="64" height="40"/>
+</marquee>
+<script>
+var direction1 = "right"
+var direction2 = "left"
+
+function change1Dir(){
+if (direction1 == "right"){document.all.ufo1.direction = "left"; direction1 = "left"}
+else {document.all.ufo1.direction = "right"; direction1="right"}}
+
+function change2Dir(){
+if (direction2 == "right"){document.all.ufo2.direction = "left"; direction2 = "left"}
+else {document.all.ufo2.direction = "right"; direction2="right"}}
+</script>
+</body>
+</html>
