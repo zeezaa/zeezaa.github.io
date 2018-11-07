@@ -98,6 +98,7 @@ html
 #left
 {
 	left:8%;
+	visibility:hidden;
 }
 #right
 {

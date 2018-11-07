@@ -20,6 +20,9 @@ function hash(bool)
 	{
 		switch(id)
 		{
+			case "":
+				pos=0;
+			break;
 			case "#home":
 				pos=0;
 			break;
