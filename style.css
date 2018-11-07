@@ -85,6 +85,16 @@ html
 	position: fixed;
 	z-index:1;
 }
+
+#back.arrow
+{
+	top:10%;
+	left:13%;
+	position: fixed;
+	visibility:hidden;
+	z-index:1;
+}
+
 #left
 {
 	left:8%;

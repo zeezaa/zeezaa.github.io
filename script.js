@@ -1,5 +1,5 @@
 var pos = 0;
-var oldPos = 0;
+console.log("on");
 
 $(document).keyup(function(e){
     if (e.keyCode==39)
@@ -25,9 +25,9 @@ function hash(bool)
 			pos=0;
 		if(id=="#projects")
 			pos = 1;
-		else if(id=="#web")
-			pos = 2;
 		else if(id=="#youtube")
+			pos = 2;
+		else if(id=="#404")
 			pos = 3;
 	}
 	moveDivs(bool);
@@ -35,11 +35,9 @@ function hash(bool)
 
 function move(right)
 {
-	var oldPos = pos;
-	
-	if(right)
+	if(right && pos < 3)
 		pos++;	
-	else if(!right)
+	else if(!right && pos > -1)
 		pos--;
 	
 	moveDivs(false);
@@ -50,9 +48,9 @@ function moveDivs(load)
 	document.getElementById("right").style.visibility="visible";
 	document.getElementById("left").style.visibility="visible";
 	
-	if(pos > 2)
+	if(pos > 1)
 		document.getElementById("right").style.visibility="hidden";
-	else if(pos < 1)
+	else if(pos < 0)
 		document.getElementById("left").style.visibility="hidden";
 	
 	for(i=-1;i<pos;i++)
@@ -82,13 +80,13 @@ function moveDivs(load)
 	}
 	else if(pos==2)
 	{
-		location.hash = "#web";
-		document.title = "zeezaa | Web";
+		location.hash = "#youtube";
+		document.title = "zeezaa | YouTube";
 	}
 	else if(pos==3)
 	{
 		location.hash = "#youtube";
-		document.title = "zeezaa | YouTube";
+		document.title = "zeezaa | 404";
 	}
 	else
 	{
@@ -96,5 +94,19 @@ function moveDivs(load)
 		document.title = "zeezaa | Home";
 	}
 	
+	if(pos == 1)
+	{
+		document.getElementById("back").style.visibility="visible";
+	}
+	else
+	{
+		document.getElementById("back").style.visibility="hidden";
+	}	
+	
 	document.getElementById(pos).style="margin-left: -100%; transition: all .5s; -wenkit-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -ms-transition: all .5s;"
+}
+
+function goBack()
+{
+	document.getElementById("1").data="projects.html";
 }
