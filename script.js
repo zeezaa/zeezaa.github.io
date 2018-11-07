@@ -76,6 +76,7 @@ function moveDivs(load)
 			document.getElementById(i).style="margin-left: 100%; transition: all .5s; -wenkit-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -ms-transition: all .5s;"
 	}
 	
+	document.getElementById("back").style.visibility="hidden";
 	switch(pos)
 	{
 		case -1:
@@ -89,6 +90,7 @@ function moveDivs(load)
 		case 1:
 			location.hash = "#projects";
 			document.title = "zeezaa | Projects";
+			document.getElementById("back").style.visibility="visible";
 		break;
 		case 2:
 			location.hash = "#youtube";
@@ -99,15 +101,6 @@ function moveDivs(load)
 			document.title = "zeezaa | 404";
 		break;
 	}
-	
-	if(pos == 1)
-	{
-		document.getElementById("back").style.visibility="visible";
-	}
-	else
-	{
-		document.getElementById("back").style.visibility="hidden";
-	}	
 	
 	document.getElementById(pos).style="margin-left: -100%; transition: all .5s; -wenkit-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -ms-transition: all .5s;"
 }
