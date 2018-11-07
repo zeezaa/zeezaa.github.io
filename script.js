@@ -19,16 +19,24 @@ function hash(bool)
 	var id = window.location.hash;
 	if(id!=null)
 	{
-		if(id=="#extra")
-			pos=-1;
-		else if(id=="#home")
-			pos=0;
-		if(id=="#projects")
-			pos = 1;
-		else if(id=="#youtube")
-			pos = 2;
-		else if(id=="#404")
-			pos = 3;
+		switch(id)
+		{
+			case "#extra":
+				pos=-1;
+			break;
+			case "#home":
+				pos=0;
+			break;
+			case "#projects":
+				pos = 1;
+			break
+			case "#youtube":
+				pos = 2;
+			break;
+			case "#404":
+				pos = 3;
+			break;
+		}
 	}
 	moveDivs(bool);
 }
@@ -68,30 +76,28 @@ function moveDivs(load)
 			document.getElementById(i).style="margin-left: 100%; transition: all .5s; -wenkit-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -ms-transition: all .5s;"
 	}
 	
-	if(pos==-1)
+	switch(pos)
 	{
-		location.hash = "#extra";
-		document.title = "zeezaa | Extra";
-	}
-	else if(pos==1)
-	{
-		location.hash = "#projects";
-		document.title = "zeezaa | Projects";
-	}
-	else if(pos==2)
-	{
-		location.hash = "#youtube";
-		document.title = "zeezaa | YouTube";
-	}
-	else if(pos==3)
-	{
-		location.hash = "#youtube";
-		document.title = "zeezaa | 404";
-	}
-	else
-	{
-		location.hash = "#home";
-		document.title = "zeezaa | Home";
+		case -1:
+			location.hash = "#extra";
+			document.title = "zeezaa | Extra";
+		break;
+		case 0:
+			location.hash = "#home";
+			document.title = "zeezaa | Home";
+		break;
+		case 1:
+			location.hash = "#projects";
+			document.title = "zeezaa | Projects";
+		break;
+		case 2:
+			location.hash = "#youtube";
+			document.title = "zeezaa | YouTube";
+		break;
+		default:
+			location.hash = "#404";
+			document.title = "zeezaa | 404";
+		break;
 	}
 	
 	if(pos == 1)
