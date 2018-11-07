@@ -21,7 +21,7 @@ function hash(bool)
 	{
 		switch(id)
 		{
-			case "#extra":
+			case "#links":
 				pos=-1;
 			break;
 			case "#home":
@@ -80,8 +80,9 @@ function moveDivs(load)
 	switch(pos)
 	{
 		case -1:
-			location.hash = "#extra";
-			document.title = "zeezaa | Extra";
+			location.hash = "#links";
+			document.title = "zeezaa | Links";
+			//document.getElementById("back").style.visibility="visible";
 		break;
 		case 0:
 			location.hash = "#home";
@@ -108,4 +109,5 @@ function moveDivs(load)
 function goBack()
 {
 	document.getElementById("1").data="projects.html";
+	//document.getElementById("-1").data="links.html";
 }
