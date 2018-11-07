@@ -1,5 +1,4 @@
 var pos = 0;
-console.log("on");
 
 $(document).keyup(function(e){
     if (e.keyCode==39)
@@ -21,9 +20,6 @@ function hash(bool)
 	{
 		switch(id)
 		{
-			case "#links":
-				pos=-1;
-			break;
 			case "#home":
 				pos=0;
 			break;
@@ -33,8 +29,8 @@ function hash(bool)
 			case "#youtube":
 				pos = 2;
 			break;
-			case "#404":
-				pos = 3;
+			default:
+				pos=3;
 			break;
 		}
 	}
@@ -43,9 +39,9 @@ function hash(bool)
 
 function move(right)
 {
-	if(right && pos < 3)
+	if(right && pos < 2)
 		pos++;	
-	else if(!right && pos > -1)
+	else if(!right && pos > 0)
 		pos--;
 	
 	moveDivs(false);
@@ -58,10 +54,10 @@ function moveDivs(load)
 	
 	if(pos > 1)
 		document.getElementById("right").style.visibility="hidden";
-	else if(pos < 0)
+	else if(pos < 1)
 		document.getElementById("left").style.visibility="hidden";
 	
-	for(i=-1;i<pos;i++)
+	for(i=0;i<pos;i++)
 	{
 		if(load)
 			document.getElementById(i).style="margin-left: -200%;"
@@ -79,11 +75,6 @@ function moveDivs(load)
 	document.getElementById("back").style.visibility="hidden";
 	switch(pos)
 	{
-		case -1:
-			location.hash = "#links";
-			document.title = "zeezaa | Links";
-			//document.getElementById("back").style.visibility="visible";
-		break;
 		case 0:
 			location.hash = "#home";
 			document.title = "zeezaa | Home";
@@ -109,5 +100,4 @@ function moveDivs(load)
 function goBack()
 {
 	document.getElementById("1").data="projects.html";
-	//document.getElementById("-1").data="links.html";
 }
