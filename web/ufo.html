@@ -1,30 +1,33 @@
 <html>
 <body>
 <style>
-body{
- background-image:url(http://wallpoper.com/images/00/37/87/60/cityscapes-buildings_00378760.jpg);
-   background-repeat:no-repeat;
-   background-size:cover;}
+body
+{
+	background-image:url(cityscape.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
 </style>
-<br><br>
-<marquee id="ufo1" behavior="scroll" direction="right" scrollamount="20">
-<img onclick="change1Dir()" src="http://www.gifs.net/Animation11/Transportation/UFOs/3D_UFO_spins.gif" width="96" height="60"/>
+<marquee id="ufo1" behavior="scroll" direction="right" scrollamount="20" style="top:5%; position:fixed">
+<img onclick="changeDir(1)" src="http://oi482.photobucket.com/albums/rr188/drexl1234/gifs/3D_UFO_spins.gif" width="96" height="60"/>
 </marquee>
 <br><br>
-<marquee id="ufo2" behavior="scroll" direction="left" scrollamount="25">
-<img onclick="change2Dir()" src="https://i482.photobucket.com/albums/rr188/drexl1234/gifs/3D_UFO_spins.gif" width="64" height="40"/>
+<marquee id="ufo2" behavior="scroll" direction="left" scrollamount="25" style="top:20%; position:fixed">
+<img onclick="changeDir(2)" src="http://oi482.photobucket.com/albums/rr188/drexl1234/gifs/3D_UFO_spins.gif" width="64" height="40"/>
 </marquee>
+<div style="top:95%; position:fixed">
+<a href="http://wallpoper.com/wallpaper/cityscapes-buildings-378760">cityscape</a>
+<a href="http://photobucket.com/gallery/user/drexl1234/media/bWVkaWFJZDoyMjU3MjI2Mw">UFOs</a>
+</div>
 <script>
-var direction1 = "right"
-var direction2 = "left"
-
-function change1Dir(){
-if (direction1 == "right"){document.all.ufo1.direction = "left"; direction1 = "left"}
-else {document.all.ufo1.direction = "right"; direction1="right"}}
-
-function change2Dir(){
-if (direction2 == "right"){document.all.ufo2.direction = "left"; direction2 = "left"}
-else {document.all.ufo2.direction = "right"; direction2="right"}}
+function changeDir(ufo)
+{
+	var ufo = document.getElementById("ufo"+ufo);
+	if (ufo.direction == "right")
+		ufo.direction = "left";
+	else
+		ufo.direction = "right";
+}
 </script>
 </body>
 </html>
