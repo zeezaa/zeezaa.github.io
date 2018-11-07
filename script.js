@@ -102,5 +102,5 @@ function moveDivs(load)
 
 function goBack()
 {
-	document.getElementById("1").data="projects.html";
+	document.getElementById("1").src="projects.html";
 }
