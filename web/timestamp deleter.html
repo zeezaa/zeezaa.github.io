@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script>
+function runit()
+{
+	const regex = /\[.+(?=:)../gm;
+	const str =  document.getElementById("text").value;
+	const subst = `\n`;
+	const result = str.replace(regex, subst);
+	document.getElementById("text").value = result;
+}
+
+function empty()
+{
+	document.getElementById("text").value = "";
+}
+</script>
+</head>
+<body>
+<div>
+<button onclick="runit()">replace</button>
+<button onclick="empty()">empty</button>
+</div>
+<textarea class="text" id="text" rows="50" cols="200">
+</textarea>
+</body>
+</html>
