@@ -1,54 +1,90 @@
 <html>
 <head>
-</head>
 <script>
-var plant="0"
+var plant="0";
 var defuse = "";
 var code = "";
 var Color = Math.floor(Math.random() * 3) + 1;
-function Red(){if(Color == 1){alert("DEFUSED!");location.reload();} else{alert("BOOM!");location.reload();}}
-function Green(){if(Color == 2){alert("DEFUSED!");location.reload();} else{alert("BOOM!");location.reload();}}
-function Blue(){if(Color == 3){alert("DEFUSED!");location.reload();} else{alert("BOOM!");location.reload();}}
 
 function codeAdd(x){
-if(plant==0){
-var lenght = code.length;
-if(lenght < 10){code = code + '' + x; document.getElementById("code").innerHTML = code;}
-else{alert("max 10 numbers allowed")}}
+	if(plant==0)
+	{
+		code = code + '' + x;
+		document.getElementById("code").innerHTML = code;
+	}
 
-else{
-var lenght = defuse.length;
-if(lenght < 10){defuse = defuse + '' + x; document.getElementById("code").innerHTML = defuse;}
-else{alert("max 10 numbers allowed")}
-if(defuse == code){alert("safe defused!"); location.reload();}}
+	else
+	{
+		defuse = defuse + '' + x;
+		document.getElementById("code").innerHTML = defuse;
+		if(defuse == code)
+		{
+			alert("safe defused!");
+			location.reload();
+		}
+	}
 }
 
-function start(){
-if(code == ""){alert("setup safe code");}
-else{
-plant = "1";
-document.getElementById('wires').style.display = 'block';
-document.getElementById("code").innerHTML = "&nbsp;";
-document.getElementById("startbtn").style.visibility = "hidden";
-window.min = document.getElementById("min").value;
-window.sec = document.getElementById("sec").value;
-window.ms = 500;
-document.getElementById('set').style.display = 'none';
-setInterval("Time()", 1);
-}
+function start()
+{
+	if(code == "")
+	{
+		alert("setup safe code");
+	}
+	else
+	{
+		plant = "1";
+		document.getElementById('wires').style.display = 'block';
+		document.getElementById("code").innerHTML = "&nbsp;";
+		document.getElementById("startbtn").style.visibility = "hidden";
+		window.min = document.getElementById("min").value;
+		window.sec = document.getElementById("sec").value;
+		window.ms = 100;
+		document.getElementById('set').style.display = 'none';
+		document.getElementById('minTime').innerHTML = min;
+		document.getElementById('secTime').innerHTML = sec;
+		document.getElementById('msTime').innerHTML = ms;
+		setInterval(Time, 10);
+	}
 }
 
-function Time(){
-ms--
-if(ms == 0 && sec == 0 && min == 0){alert("BOOM!");location.reload();}
-if(ms == 0){sec--; ms=500;}
-if(min != 0){if(sec == 0){min--; sec=60;}}
+function Time()
+{
+	ms--
+	if(ms == 0 && sec == 0 && min == 0)
+	{
+		alert("BOOM!");
+		location.reload();
+	}
+	if(ms == 0)
+	{
+		sec--; ms=100;
+	}
+	if(min != 0)
+	{
+		if(sec == 0)
+		{
+			min--; sec=60;
+		}
+	}
+	
+	if(ms < 10)
 
-document.getElementById('minTime').innerHTML = min;
-document.getElementById('secTime').innerHTML = sec;
-document.getElementById('msTime').innerHTML = ms;
+	document.getElementById('minTime').innerHTML = min;
+	document.getElementById('secTime').innerHTML = sec;
+	document.getElementById('msTime').innerHTML = ms;
+}
+
+function wires(C)
+{
+	if(Color = C)
+		alert("DEFUSED!");
+	else
+		alert("BOOM!");
+	location.reload();
 }
 </script>
+</head>
 <body>
 <div id="timer" width="100%" height="25%" align="center">
   <table>
@@ -56,7 +92,7 @@ document.getElementById('msTime').innerHTML = ms;
       <td id="minTime">MIN</td>
       <td>:</td>
       <td id="secTime">SEC</td>
-	  <td>:</td>
+	  <td>.</td>
 	  <td id="msTime">MS</td>
   </tr>
   </table>
@@ -94,9 +130,9 @@ document.getElementById('msTime').innerHTML = ms;
 </div>
 <div id="wires" style="display: none;">
   <ul>
-      <tr><button onclick="Red()">RED</button></tr>
-      <tr><button onclick="Green()">GREEN</button></tr>
-      <tr><button onclick="Blue()">BLUE</button></tr>
+      <tr><button onclick="wires(1)">RED</button></tr>
+      <tr><button onclick="wires(2)">GREEN</button></tr>
+      <tr><button onclick="wires(3)">BLUE</button></tr>
   </ul>
   </div>
 </div>
