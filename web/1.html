@@ -1,0 +1,12 @@
+<html>
+<script>
+var piste = 1;
+if(localStorage.getItem("seur") == piste)
+{
+	window.location.href = "google form" + piste + " " +localStorage.getItem("kurs");
+	localStorage.setItem("seur", 2);
+}
+else
+	alert("mene pisteelle " + localStorage.getItem("seur"));
+</script>
+</html>
