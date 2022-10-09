@@ -24,9 +24,19 @@ html
 {
 	position: fixed;
 	left: 50%;
-    margin-left: -12.5%;
+    	margin-left: -12.5%;
 	width: 25%;
 	height:8%;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-color: #3366FF;
+	right: 2.5%;
+	width: 95%;
+	position: fixed;
+	z-index: 1;
+	margin-top: -15px;
+	background: rgb(255,148,33);
+	background: radial-gradient(circle, rgba(255,148,33,1) 0%, rgba(255,128,13,1) 30%, rgba(255,128,13,1) 60%, rgba(182,93,13,1) 100%);
 }
 
 .links
