@@ -1,39 +1,44 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="ISO-8859-1"> 
-<link rel='shortcut icon' type='image/x-icon' href='fav.ico' />
-<link rel="icon" href="fav.ico" type="image/x-icon"> <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
-<link href="style.css" rel="stylesheet" type="text/css"></style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js"></script>
-<link href=' http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
-<title>zeezaa</title>
+	<meta charset="ISO-8859-1"> 
+	<link rel='shortcut icon' type='image/x-icon' href='fav.ico' />
+	<link rel="icon" href="fav.ico" type="image/x-icon"> <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+	<link href="style.css" rel="stylesheet" type="text/css"></style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<link href=' http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+	<title>zeezaa</title>
 </head>
 <body onload="hash(true)" onhashchange="hash(false);">
-<table class="links">
-<tr>
-	<th><a href="https://github.com/zeezaa" target="_blank"><image src="logos/GitHub.png"></image></a></th>
-	<th><a href="https://zeezaa.itch.io/" target="_blank"><image src="logos/Itch.png"></image></a></th>
-	<th><a href="https://twitter.com/zeezaaYT" target="_blank"><image src="logos/Twitter.png"></image></a></th>
-	<th><a href="https://www.youtube.com/channel/UCeS16kCC5HvwZ9ahi-HCOog" target="_blank"><image src="logos/YouTube.png"></image></a></th>
-</tr>
-</table>
-<table class="header">
-<tr>
-	<th><button class="button" id="home" onclick="window.location.href='#home';">home</button></th>
-	<th><button class="button" id="projects" onclick="window.location.href='#projects';">projects</button></th>
-	<th><button class="button" id="youtube" onclick="window.location.href='#youtube';">youtube</button></th>
-</tr>
-</div>
-<input type="image" id="left" class="arrow" onclick="move(false)" src="aLeft.svg" />
-<input type="image" id="right" class="arrow" onclick="move(true)" src="aRight.svg" />
-<input type="image" id="back" class="arrow" onclick="goBack()" src="aLeft.svg">
-<iframe class="page" id="-1" src="extra.html" ></iframe> <!-- links.html -->
-<iframe class="page" id="0" src="home.html" ></iframe>
-<iframe class="page" id="1" src="projects.html" ></iframe>
-<iframe class="page" id="2" src="youtube.html" ></iframe>
-<iframe class="page" id="3" src="404.html" ></iframe>
-<div class="footer"></div>
+	<table class="header">
+		<tr>
+			<th style="width:15%"><button class="button" id="home" onclick="window.location.href='#home';">home</button></th>
+			<th style="width:15%"><button class="button" id="projects" onclick="window.location.href='#projects';">projects</button></th>
+			<th style="width:15%"><button class="button" id="youtube" onclick="window.location.href='#youtube';">youtube</button></th>
+			<th style="width:25%"></th>
+			<th style="width:15%"><a href="https://zeezaa.me/Social-Mutualism" target="_blank" style="text-decoration: none;"><img style="max-height:4vh; max-width:4vh; height:auto; width:auto;" src="logos/SoMu.png">&nbsp;&nbsp;&nbsp;Social Mutualism</img></th>
+			<th style="width:15%"><a href="#404" style="text-decoration: none;"><img style="max-height:4vh; max-width:4vh; height:auto; width:auto;" src="logos/SuMu.png">&nbsp;&nbsp;&nbsp;SuMu .Ry</img></a></th>
+		</tr>
+	</table>
+	<div id="arrows">
+		<img id="left" class="arrow" onclick="move(false)" src="aLeft.svg" />
+		<img id="right" class="arrow" onclick="move(true)" src="aRight.svg" />
+		<img id="back" class="arrow" onclick="goBack()" src="aLeft.svg">
+	</div>
+	<div id="pages">
+		<iframe class="page" id="0" src="home.html" ></iframe>
+		<iframe class="page" id="1" src="projects.html" ></iframe>
+		<iframe class="page" id="2" src="youtube.html" ></iframe>
+		<iframe class="page" id="3" src="404.html"></iframe>
+	</div>
+	<table class="footer">
+		<tr>
+			<th><a class="links" href="https://github.com/zeezaa" target="_blank"><image src="logos/GitHub.png"></image></a></th>
+			<th><a class="links" href="https://zeezaa.itch.io/" target="_blank"><image src="logos/Itch.png"></image></a></th>
+			<th><a class="links" href="https://twitter.com/zeezaaYT" target="_blank"><image src="logos/Twitter.png"></image></a></th>
+			<th><a class="links" href="https://www.youtube.com/channel/UCeS16kCC5HvwZ9ahi-HCOog" target="_blank"><image src="logos/YouTube.png"></image></a></th>
+		</tr>
+	</table>
 </body>
 </html>
