@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta charset="ISO-8859-1"> 
+<link href="pages.css" rel="stylesheet" type="text/css"></style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href=' http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+<title>zeezaa | Worlds</title>
+<style>
+*
+{
+	font-family: "Expletus Sans", arial, serif;
+	color: white;
+    text-shadow:
+    -1px -1px 2px #000,
+    1px -1px 2px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+
+body
+{
+	background-color: #0e1013;
+}
+
+.closed
+{
+	visibility: hidden;
+	display: none;
+}
+
+.open
+{
+	visibility: visible;
+	display: block;
+	margin: 0% 7%;
+	padding: 10px;
+	width: 84.5%;
+	clear: left;
+	-webkit-animation: open 0.3s normal forwards;
+	-moz-animation: open 0.3s normal forwards;
+    animation: open 0.3s normal forwards;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+}
+
+.world
+{
+	border: 20px solid #05323c;
+	background: #07242b;
+	border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+}
+
+.closed, .open
+{
+  display: table;
+  width: 85%;
+}
+
+.row
+{
+  display: flex;
+}
+
+.col
+{
+  flex: 1;
+  text-align:center;
+  padding: 1vh;
+}
+
+button
+{
+	font-size: 2vh;
+	border-radius: 2vh;
+	color: #ffffff;
+	font-size: 2vh;
+	padding: 1vh;
+	background: #3498db;
+}
+</style>
+<script>
+function toggleSect(sect)
+{
+	var sib = sect.nextElementSibling;
+	if(sib.className=="closed")
+	{
+		sib.className="open";
+		sect.querySelector('.sectI').src="minus.svg";
+	}
+	else
+	{
+		sib.className="closed";
+		sect.querySelector('.sectI').src="plus.svg";
+	}
+}
+</script>
+</head>
+<body>
+	<header id="overview">
+		<h2>zeezaa World Index</h2>
+	</header>
+	<article id="0Intro">
+		<table onclick="toggleSect(this)" class="sect" style="line-height: 0px">
+			<tr class="sectTable">
+				<th class="sectHeader"><h2 style="text-align: left">+ Games</h2></th>
+			</tr>
+		</table>
+		<div class="closed" id="0content">
+			<div class="row">
+				<div class="col">
+					<div class="world" data-wrld="wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1">
+						<img src="unknown.png" width="100%"></img>
+						<h3>world name here</h3>
+						<button onclick="window.location.href='https://vrchat.com/home/world/wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1';">launch</button>
+					</div>
+				</div>
+								<div class="col">
+					<div class="world" data-wrld="wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1">
+						<img src="unknown.png" width="100%"></img>
+						<h3>world name here</h3>
+						<button onclick="window.location.href='https://vrchat.com/home/world/wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1';">launch</button>
+					</div>
+				</div>
+								<div class="col">
+					<div class="world" data-wrld="wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1">
+						<img src="unknown.png" width="100%"></img>
+						<h3>world name here</h3>
+						<button onclick="window.location.href='https://vrchat.com/home/world/wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1';">launch</button>
+					</div>
+				</div>
+								<div class="col">
+					<div class="world" data-wrld="wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1">
+						<img src="unknown.png" width="100%"></img>
+						<h3>world name here</h3>
+						<button onclick="window.location.href='https://vrchat.com/home/world/wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1';">launch</button>
+					</div>
+				</div>
+								<div class="col">
+					<div class="world" data-wrld="wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1">
+						<img src="unknown.png" width="100%"></img>
+						<h3>world name here</h3>
+						<button onclick="window.location.href='https://vrchat.com/home/world/wrld_64765b1e-003f-47cb-9fa3-ceb78a6fd7c1';">launch</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>
