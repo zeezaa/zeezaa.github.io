@@ -1,14 +1,21 @@
 /* Hide Nitro tab */
-a[href="/store"] {
+a[href="/store"]{
 	display: none;
 }
 
 /* Hide Shop tab */
-a[href="/shop"] {
+a[href="/shop"]{
 	display: none;
 }
 
 /* Hide Send a gift button */
 [aria-label="Send a gift"] {
 	display: none;
+}
+
+/* fix space between friends and "Direct Messages" title */
+.privateChannelsHeaderContainer_ddcec6{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	height: 30px;
 }
