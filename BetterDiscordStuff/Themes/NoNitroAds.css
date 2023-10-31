@@ -15,7 +15,7 @@ a[href="/shop"]{
 
 /* fix space between friends and "Direct Messages" title */
 .privateChannelsHeaderContainer_ddcec6{
-	padding-top: 6px;
-	padding-bottom: 6px;
-	height: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height: 25px;
 }
