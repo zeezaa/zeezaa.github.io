@@ -1,14 +1,14 @@
-/* Nitro DM tab, not working on desktop app currently */
-[data-list-item-id="private-channels-uid_23___nitro"] {
-	display: none
+/* Hide Nitro tab */
+a[href="/store"] {
+	display: none;
 }
 
-/* Shop DM tab, not working on desktop app currently */
-[data-list-item-id="private-channels-uid_23___shop"] {
-	display: none
+/* Hide Shop tab */
+a[href="/shop"] {
+	display: none;
 }
 
-/* Send a gift chatbox button */
+/* Hide Send a gift button */
 [aria-label="Send a gift"] {
-	display: none
+	display: none;
 }
